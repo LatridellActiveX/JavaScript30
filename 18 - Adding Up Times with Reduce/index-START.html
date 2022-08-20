@@ -182,6 +182,52 @@
     </li>
   </ul>
 <script>
+
+const items = document.querySelectorAll('li');
+const stringTimes = [];
+
+let minSum = 0;
+let secSum = 0;
+
+items.forEach(li => stringTimes.push(li.dataset.time));
+
+
+function parseString(s){
+  const charay = s.split(':');
+  minSum += parseInt(charay[0]);
+  secSum += parseInt(charay[1]);
+}
+
+for(let i = 0; i < stringTimes.length; i++){
+  parseString(stringTimes[i]);
+}
+
+let remainder = secSum % 60;
+let minstuff = Math.round(secSum / 60) - 1; //only error
+let hours = Math.round(minSum / 60);
+let minRemainder = (minstuff + minSum) % 60;
+
+
+
+
+
+
+console.log(`Hours: ${hours}, mins: ${minRemainder}, seconds: ${remainder}`);
+
+//alright the array is now populated.
+//now we need to parse each one and add it to a sum. 
+//We need to select a single item, seperate it by the :
+//Then we need to temp store the min value and the sec value
+//I could use a regex but I dont know shit about regex so
+
+
+
+
+
+
+
+
+
 </script>
 </body>
 </html>
