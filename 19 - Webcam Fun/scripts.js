@@ -3,3 +3,8 @@ const canvas = document.querySelector('.photo');
 const ctx = canvas.getContext('2d');
 const strip = document.querySelector('.strip');
 const snap = document.querySelector('.snap');
+
+
+
+//cant do this because I dont have a webcam on my desktop
+//motherfucker!
